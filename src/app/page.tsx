@@ -1,7 +1,19 @@
+"use client";
+
+import PageHeader from "@/app/page_sections/header";
+import AboutSection from "./page_sections/about";
+import ServicesSection from "./page_sections/services";
+
 export default function Home() {
   return (
-    <div className="p-24">
-      <h1>HireNet studios information site</h1>
-    </div>
+    <>
+      <header className="z-30 fixed top-0 w-full max-w-screen-2xl mx-auto">
+        <PageHeader />
+      </header>
+      <main>
+        <AboutSection />
+        <ServicesSection />
+      </main>
+    </>
   );
 }

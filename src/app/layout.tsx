@@ -10,7 +10,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "HireNetStudios | Information site",
+  title: "HireyNet Studios | Information Site",
   description: "",
 };
 
@@ -20,10 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
         className={cn(
-          "min-h-screen dark:bg-background font-sans antialiased",
+          "min-h-screen max-w-screen-2xl mx-auto bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
