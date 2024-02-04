@@ -30,7 +30,7 @@ export default function AboutSection() {
         </h1>
         <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-200">
           Here at HireyNet Studios, we focus on bringing the imagination to
-          reality, storytelling through videos and pictures, capitivating the
+          reality, storytelling through videos and pictures, capturing the
           moment in all it's splendor. Let us tell your story.
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
