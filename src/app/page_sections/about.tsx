@@ -66,13 +66,13 @@ export default function AboutSection() {
       {/* images of crew */}
       <div className="max-lg:hidden">
         <img
-          className="-z-10 absolute top-80 -left-10 w-[30%] -rotate-6 opacity-65"
+          className="-z-10 absolute top-80 -left-10 w-[30%] -rotate-6 opacity-50"
           src="/images/crew1.jpg"
           alt="crew members"
         />
 
         <img
-          className="-z-10 absolute top-44 -right-10 w-[30%] rotate-6 opacity-65"
+          className="-z-10 absolute top-44 -right-10 w-[30%] rotate-6 opacity-50"
           src="/images/crew2.jpg"
           alt="crew members"
         />
