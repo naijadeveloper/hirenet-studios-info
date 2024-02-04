@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="relative pt-24 px-4 pb-36">
+    <section className="relative pt-24 px-4 pb-36 overflow-hidden">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center md:py-16">
         <button className="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm rounded-full bg-orange-900 text-orange-300 hover:bg-orange-800">
           <span className="text-xs bg-orange-600 rounded-full text-white px-4 py-1.5 me-3 max-md:hidden">
@@ -28,7 +28,7 @@ export default function AboutSection() {
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
           We are HireyNet Studios
         </h1>
-        <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-400">
+        <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 lg:px-48 text-gray-200">
           Here at HireyNet Studios, we focus on bringing the imagination to
           reality, storytelling through videos and pictures, capitivating the
           moment in all it's splendor. Let us tell your story.
@@ -63,8 +63,22 @@ export default function AboutSection() {
           </a>
         </div>
       </div>
+      {/* images of crew */}
+      <div className="max-lg:hidden">
+        <img
+          className="-z-10 absolute top-80 -left-10 w-[30%] -rotate-6 opacity-65"
+          src="/images/crew1.jpg"
+          alt="crew members"
+        />
+
+        <img
+          className="-z-10 absolute top-44 -right-10 w-[30%] rotate-6 opacity-65"
+          src="/images/crew2.jpg"
+          alt="crew members"
+        />
+      </div>
       {/* wavy divider */}
-      <div className="absolute bottom-0 left-0 w-full rotate-180">
+      <div className="absolute bottom-0 left-0 overflow-hidden w-full rotate-180">
         <svg
           className="relative block [width:calc(100%+1.3px)] h-[183px]"
           data-name="Layer 1"
