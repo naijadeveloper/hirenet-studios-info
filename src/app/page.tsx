@@ -3,6 +3,8 @@
 import PageHeader from "@/app/page_sections/header";
 import AboutSection from "./page_sections/about";
 import ServicesSection from "./page_sections/services";
+import CustomersSection from "./page_sections/customers";
+import ContactsSection from "./page_sections/contacts";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <main>
         <AboutSection />
         <ServicesSection />
+        <CustomersSection />
+        {/* <ContactsSection /> */}
       </main>
     </>
   );

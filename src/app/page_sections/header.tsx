@@ -23,7 +23,7 @@ export default function PageHeader() {
         setCountryDropdown(false);
         setDropdownBooking(false);
       }}
-      className="py-3 text-gray-700 border border-gray-700 bg-gray-800 md:px-2"
+      className="py-3 text-gray-700 bg-gray-800 md:px-2"
       aria-label="Menu"
     >
       <div className="flex flex-col items-center justify-center lg:flex-row">
@@ -77,7 +77,7 @@ export default function PageHeader() {
             <li>
               <div className="flex items-center">
                 <span className="flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 md:mx-2 max-md:hover:bg-gray-700 max-md:group-hover:text-white cursor-pointer">
-                  Services
+                  Our services
                 </span>
               </div>
             </li>
