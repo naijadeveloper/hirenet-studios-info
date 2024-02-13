@@ -19,7 +19,7 @@ export default function ServicesSection() {
         take great care of you.
       </p>
 
-      <ul className="mt-10 space-y-5 md:w-[98%] mx-auto">
+      <ul className="mt-10 space-y-5">
         {/*grid md:grid-cols-2 lg:grid-cols-3 gap-4*/}
         {Array(4)
           .fill(0)

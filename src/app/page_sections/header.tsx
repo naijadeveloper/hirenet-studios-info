@@ -23,7 +23,7 @@ export default function PageHeader() {
         setCountryDropdown(false);
         setDropdownBooking(false);
       }}
-      className="py-3 text-gray-700 bg-gray-800 md:px-2"
+      className="py-3 text-gray-700 bg-gray-800 border border-background md:px-2"
       aria-label="Menu"
     >
       <div className="flex flex-col items-center justify-center lg:flex-row">

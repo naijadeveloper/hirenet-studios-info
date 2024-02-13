@@ -19,13 +19,13 @@ export default function CustomersSection() {
         with their needs.
       </p>
 
-      <ul className="mt-10 md:w-[98%] mx-auto grid md:grid-cols-2 gap-4">
-        {Array(4)
+      <ul className="mt-10 flex flex-wrap justify-center gap-4">
+        {Array(5)
           .fill(0)
           .map((item, index) => (
             <li
               key={index}
-              className="w-full rounded-md bg-gray-800 px-3 py-6 border border-background shadow-xl"
+              className="w-[50%] md:w-[40%] md:max-w-[50%] grow-[1] rounded-md bg-gray-800 px-3 py-6 border border-background shadow-xl"
             >
               <div className="flex flex-col items-center text-center">
                 <img

@@ -5,6 +5,7 @@ import AboutSection from "./page_sections/about";
 import ServicesSection from "./page_sections/services";
 import CustomersSection from "./page_sections/customers";
 import ContactsSection from "./page_sections/contacts";
+import PageFooter from "./page_sections/footer";
 
 export default function Home() {
   return (
@@ -16,8 +17,11 @@ export default function Home() {
         <AboutSection />
         <ServicesSection />
         <CustomersSection />
-        {/* <ContactsSection /> */}
+        <ContactsSection />
       </main>
+      <footer className="relative pt-10 bg-primary">
+        <PageFooter />
+      </footer>
     </>
   );
 }

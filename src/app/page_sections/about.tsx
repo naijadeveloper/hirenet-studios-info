@@ -57,20 +57,6 @@ export default function AboutSection() {
           </button>
         </div>
       </div>
-      {/* images of crew */}
-      {/* <div className="max-lg:hidden">
-        <img
-          className="-z-10 absolute top-80 -left-10 w-[30%] -rotate-6 opacity-50"
-          src="/images/crew1.jpg"
-          alt="crew members"
-        />
-
-        <img
-          className="-z-10 absolute top-44 -right-10 w-[30%] rotate-6 opacity-50"
-          src="/images/crew2.jpg"
-          alt="crew members"
-        />
-      </div> */}
       {/* wavy divider */}
       <div className="absolute bottom-0 left-0 overflow-hidden w-full rotate-180">
         <svg
