@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Dropdown from "./header_sections/dropdown";
 
@@ -24,10 +24,10 @@ export default function PageHeader({
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  let isMobileView = false;
+  let isMobileView = useRef(false);
 
   useEffect(() => {
-    isMobileView = window.matchMedia("(max-width: 767px)").matches;
+    isMobileView.current = window.matchMedia("(max-width: 767px)").matches;
   });
 
   return (

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-sans",
@@ -28,8 +28,10 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {children}
-        <Toaster />
+        <>
+          {children}
+          <Toaster />
+        </>
       </body>
     </html>
   );
