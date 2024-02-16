@@ -29,7 +29,7 @@ export default function PageFooter() {
       {/* divider end */}
       <div className="pt-44 bg-background p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm sm:text-center text-gray-400">
-          &copy; 2023{" "}
+          &copy; 2024{" "}
           <a href="#" className="hover:underline">
             HireyStudios
           </a>

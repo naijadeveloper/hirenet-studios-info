@@ -1,10 +1,15 @@
 import Link from "next/link";
 
-export default function ContactsSection() {
+export default function ContactsSection({
+  contactsRef,
+}: {
+  contactsRef: React.LegacyRef<HTMLElement> | null;
+}) {
   const socials = ["Facebook", "Twitter", "Instagram", "LinkedIn"];
   return (
     <section
-      id="services"
+      ref={contactsRef}
+      id="contacts"
       className="min-h-[500px] bg-primary pt-12 pb-4 px-4 md:px-8"
     >
       <h3 className="relative mx-auto text-center my-4 text-3xl">

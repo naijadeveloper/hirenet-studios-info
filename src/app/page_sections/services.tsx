@@ -1,9 +1,11 @@
-import { MdArrowDownward } from "react-icons/md";
-import { IoMdArrowDown } from "react-icons/io";
-
-export default function ServicesSection() {
+export default function ServicesSection({
+  servicesRef,
+}: {
+  servicesRef: React.LegacyRef<HTMLElement> | null;
+}) {
   return (
     <section
+      ref={servicesRef}
       id="services"
       className="min-h-[500px] bg-primary pt-12 pb-4 px-4 md:px-8"
     >

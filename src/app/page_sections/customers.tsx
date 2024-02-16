@@ -1,10 +1,15 @@
 import Link from "next/link";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
-export default function CustomersSection() {
+export default function CustomersSection({
+  customersRef,
+}: {
+  customersRef: React.LegacyRef<HTMLElement> | null;
+}) {
   return (
     <section
-      id="services"
+      ref={customersRef}
+      id="customers"
       className="min-h-[500px] bg-primary pt-12 pb-4 px-4 md:px-8"
     >
       <h3 className="relative mx-auto text-center my-4 text-3xl">

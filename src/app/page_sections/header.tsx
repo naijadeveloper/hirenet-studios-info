@@ -1,13 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Dropdown from "./header_sections/dropdown";
 
-export default function PageHeader() {
-  const [dropdownBooking, setDropdownBooking] = useState(false);
-  const [country, setCountry] = useState("United Kingdom");
-  const [countryDropdown, setCountryDropdown] = useState(false);
+export default function PageHeader({
+  activeSection,
+  dropdownBooking,
+  setDropdownBooking,
+  country,
+  setCountry,
+  countryDropdown,
+  setCountryDropdown,
+}: {
+  activeSection: string;
+  dropdownBooking: boolean;
+  setDropdownBooking: React.Dispatch<React.SetStateAction<boolean>>;
+  country: string;
+  setCountry: React.Dispatch<React.SetStateAction<string>>;
+  countryDropdown: boolean;
+  setCountryDropdown: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -19,10 +32,6 @@ export default function PageHeader() {
 
   return (
     <nav
-      onClick={() => {
-        setCountryDropdown(false);
-        setDropdownBooking(false);
-      }}
       className="py-3 text-gray-700 bg-gray-800 border border-background md:px-2"
       aria-label="Menu"
     >
@@ -59,26 +68,59 @@ export default function PageHeader() {
         >
           <li className="max-md:w-full">
             <div className="items-center w-full md:flex">
-              <Link
-                href="#about"
-                className="flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700"
+              <button
+                onClick={() => {
+                  const section = document.querySelector(
+                    "#about"
+                  ) as HTMLElement;
+                  window.scroll({
+                    top: section?.offsetTop,
+                    behavior: "smooth",
+                  });
+                }}
+                className={`max-md:w-full flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700 ${
+                  activeSection == "about" && "text-white"
+                }`}
               >
                 About
-              </Link>
+              </button>
             </div>
           </li>
 
           <div
-            onClick={(e) => {}}
+            onClick={(e) => {
+              if (isMobileView) {
+                const section = document.querySelector(
+                  "#services"
+                ) as HTMLElement;
+                window.scroll({
+                  top: section?.offsetTop,
+                  behavior: "smooth",
+                });
+              }
+            }}
             className={`${
               !isHovering && "group"
             } flex items-center justify-start bg-gray-700 md:rounded-md md:justify-center md:px-3 md:py-2 max-md:w-full`}
           >
             <li>
               <div className="flex items-center">
-                <span className="flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 md:mx-2 max-md:hover:bg-gray-700 max-md:group-hover:text-white cursor-pointer">
+                <button
+                  onClick={() => {
+                    const section = document.querySelector(
+                      "#services"
+                    ) as HTMLElement;
+                    window.scroll({
+                      top: section?.offsetTop,
+                      behavior: "smooth",
+                    });
+                  }}
+                  className={`flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 md:mx-2 max-md:hover:bg-gray-700 max-md:group-hover:text-white cursor-pointer ${
+                    activeSection == "services" && "text-white"
+                  }`}
+                >
                   Our services
-                </span>
+                </button>
               </div>
             </li>
 
@@ -155,23 +197,43 @@ export default function PageHeader() {
 
           <li className="max-md:w-full">
             <div className="items-center w-full md:flex">
-              <Link
-                href="#customers"
-                className="flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700"
+              <button
+                onClick={() => {
+                  const section = document.querySelector(
+                    "#customers"
+                  ) as HTMLElement;
+                  window.scroll({
+                    top: section?.offsetTop,
+                    behavior: "smooth",
+                  });
+                }}
+                className={`max-md:w-full flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700 ${
+                  activeSection == "customers" && "text-white"
+                }`}
               >
                 Our Customers
-              </Link>
+              </button>
             </div>
           </li>
 
           <li className="max-md:w-full">
             <div className="items-center w-full md:flex">
-              <Link
-                href="#"
-                className="flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700"
+              <button
+                onClick={() => {
+                  const section = document.querySelector(
+                    "#contacts"
+                  ) as HTMLElement;
+                  window.scroll({
+                    top: section?.offsetTop,
+                    behavior: "smooth",
+                  });
+                }}
+                className={`max-md:w-full flex font-medium text-base text-gray-400 hover:text-white p-2 py-4 md:text-sm md:p-0 max-md:hover:bg-gray-700 ${
+                  activeSection == "contacts" && "text-white"
+                }`}
               >
                 Contacts
-              </Link>
+              </button>
             </div>
           </li>
 

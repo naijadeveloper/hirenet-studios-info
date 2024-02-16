@@ -1,8 +1,23 @@
-export default function AboutSection() {
+import InfoSheet from "./more_info_sheet";
+
+export default function AboutSection({
+  aboutRef,
+  showToast,
+}: {
+  aboutRef: React.LegacyRef<HTMLElement> | null;
+  showToast: () => void;
+}) {
   return (
-    <section id="about" className="relative pt-24 px-4 pb-36 overflow-hidden">
+    <section
+      ref={aboutRef}
+      id="about"
+      className="relative pt-24 px-4 pb-36 overflow-hidden"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center md:py-16">
-        <button className="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm rounded-full bg-orange-900 text-orange-300 hover:bg-orange-800">
+        <button
+          onClick={showToast}
+          className="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm rounded-full bg-orange-900 text-orange-300 hover:bg-orange-800"
+        >
           <span className="text-xs bg-orange-600 rounded-full text-orange-100 font-bold tracking-wider px-4 py-1.5 me-3 max-md:hidden">
             Attention
           </span>{" "}
@@ -52,9 +67,7 @@ export default function AboutSection() {
               />
             </svg>
           </button>
-          <button className="inline-flex justify-center items-center py-3 px-5 sm:ms-4 text-base font-medium text-center rounded-md border focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800">
-            Learn more
-          </button>
+          <InfoSheet />
         </div>
       </div>
       {/* wavy divider */}
