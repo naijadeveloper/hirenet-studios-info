@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins as FontSans } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Poppins } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
 
-const fontSans = FontSans({
+const appFont = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-appfont",
 });
 
 export const metadata: Metadata = {
@@ -23,15 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
-          "min-h-screen max-w-screen-2xl mx-auto bg-background font-sans antialiased",
-          fontSans.variable
-        )}
+        className={`${appFont.variable} min-h-screen max-w-screen-2xl mx-auto font-appfont antialiased`}
       >
-        <>
-          {children}
-          <Toaster />
-        </>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -26,11 +26,8 @@ export default function InfoSheet() {
             account and remove your data from our servers.
           </SheetDescription>
         </SheetHeader> */}
-        <Tabs
-          defaultValue="attention"
-          className="min-w-[400px] flex flex-col items-center mt-4"
-        >
-          <TabsList className="mx-auto">
+        <Tabs defaultValue="attention" className="w-full mt-6 border">
+          <TabsList className="border border-pink-300">
             <TabsTrigger value="attention">Attention</TabsTrigger>
             <TabsTrigger value="mission">Our mission</TabsTrigger>
             <TabsTrigger value="vision">Our vision</TabsTrigger>
